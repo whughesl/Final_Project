@@ -15,8 +15,8 @@
 
 .App-header {
   background-color: #bcc7dd;
-  min-height: 100vh;
-  display: flex;
+  /* min-height: 100vh; */
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -35,4 +35,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#head {
+  top: 0;
+  margin-top: 0%;
+}
+#dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.review {
+  margin-top: 5px !important;
+  box-shadow: -5px 5px 5px grey;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 5px;
+}
+.review-body {
+  margin-left: 5px !important;
+}
+#map {
+  /* padding: 3px; */
+  color: white;
 }

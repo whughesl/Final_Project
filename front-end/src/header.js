@@ -36,7 +36,7 @@ class HeaderComponent extends React.Component {
 
     render() {
         let options = [{value:'best', label:'Best Alleyways'}, {value:'worst', label:'Worst Alleyways'}, {value:'contr', label:'Controversial Alleyways'}];
-        let dropdown = <Dropdown options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
+        let dropdown = <Dropdown id="dropdown" options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
 
         let loginButton = <Button className="is-dark" onClick={this.handleClick}>Login</Button>
         let signUpButton = <Button  onClick={this.handleClick}>Sign Up</Button>
@@ -55,11 +55,15 @@ class HeaderComponent extends React.Component {
         //colors, better buttons, better search ----> STYLE
         //Drop downs
         return (
-            <div className="Hero">
+            <section id="head" className="hero top fixed ">
+            <div className="hero-body">
+                <div className="container">
+                    {searchBar}
+                    {dropdown}  
+                </div>
                 
-                {searchBar}
-                {dropdown}
             </div>
+            </section>
         );
     }
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import 'react-bulma-components/dist/react-bulma-components.min.css'
-import {Button, Form} from 'react-bulma-components';    
+import {Button, Form} from 'react-bulma-components'; 
+   
 // import {Input} from 'react-bulma-components/lib/components/form/components/input';
 class HeaderComponent extends React.Component {
     constructor(props) {
@@ -17,6 +18,9 @@ class HeaderComponent extends React.Component {
 
     handleClick = () => {
         alert("Unimplemented");
+    }
+    handleSignUp = () => {
+        return(<Button>Submit</Button>)
     }
 
     handleSearchBar = (event) => {
@@ -40,7 +44,7 @@ class HeaderComponent extends React.Component {
         let dropdown = <Dropdown id="dropdown" options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
 
         let loginButton = <Button className="is-dark" onClick={this.handleClick}>Login</Button>
-        let signUpButton = <Button  onClick={this.handleClick}>Sign Up</Button>
+        let signUpButton = <Button  onClick={this.handleSignUp}>Sign Up</Button>
 
         let searchBar = <div className="field">
                             <div className="control">

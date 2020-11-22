@@ -10,11 +10,12 @@ class MyMarkers extends React.Component {
     getAlleys = () => {
         //function to get the alleys, return array of long/lat objs
         let list = [{
+            _id:0,
             lat: 35.9079,
             lng: -79.0541
-          }, {
-              lat:35.9135412,
-            lng: -790552325}]
+          }, { _id:1,
+              lat: 35.9135412,
+            lng: -79.0552325}]
         return list;
     }
 
@@ -24,7 +25,7 @@ class MyMarkers extends React.Component {
                 lat: alley.lat,
                 lng: alley.lng
             }
-            return(<Marker position = {position}/>
+            return(<Marker key={alley._id} position = {position}/>
 
             )
         })

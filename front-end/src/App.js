@@ -7,7 +7,9 @@ import BodyComponent from './pageBody';
 
 function App() {
   return (
+    
     <div className="App">
+      
       <header className="App-header">
        <HeaderComponent/>
        <BodyComponent/>

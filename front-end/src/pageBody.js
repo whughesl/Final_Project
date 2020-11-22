@@ -1,11 +1,14 @@
 import React from 'react';
 import './data.json'
 import alleyjpg from './alley.jpg' 
-
+// const google = require()
+// import {google} from 'google-maps';      
+import MyMap from './maps.js'
+//// AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8
 class BodyComponent extends React.Component {
     constructor(props) {
         super(props);
-        
+
     }
     getReviews = () => {
         return [{"_id": "0",
@@ -44,6 +47,12 @@ class BodyComponent extends React.Component {
         return list;
     }   
 
+    // initMapScript = () => {
+    //     return ()
+    // }
+    
+    
+
     getStructure = () => {
         return( <section>
             <div className="columns review-body">
@@ -51,11 +60,20 @@ class BodyComponent extends React.Component {
                     {this.reviewObjs(this.getReviews())}
                 </div>
                 <div className="column" id="map">
-
+                    {/* <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8&callback=initMap'>
+                    </script> */}
+                    <MyMap></MyMap>
                 </div>
             </div>
         </section>);
     }
+
+    // initMap() {
+    //     let map = new google.maps.Map(document.getElementById("map"), {
+    //       center: { lat: -34.397, lng: 150.644 },   
+    //       zoom: 8,
+    //     });
+    // }
 
     render () {
         return(

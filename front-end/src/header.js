@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import 'react-bulma-components/dist/react-bulma-components.min.css'
-import {Button, Form} from 'react-bulma-components';
+import {Button, Form} from 'react-bulma-components';    
 // import {Input} from 'react-bulma-components/lib/components/form/components/input';
 class HeaderComponent extends React.Component {
     constructor(props) {
@@ -34,8 +34,9 @@ class HeaderComponent extends React.Component {
         console.log(this.state.dropValue);
     }
 
+    
     render() {
-        let options = [{value:'best', label:'Best Alleyways'}, {value:'worst', label:'Worst Alleyways'}, {value:'contr', label:'Controversial Alleyways'}];
+        let options = [{value:"", label:"Our Picks"},{value:'best', label:'Best Alleyways'}, {value:'worst', label:'Worst Alleyways'}, {value:'contr', label:'Controversial Alleyways'}];
         let dropdown = <Dropdown id="dropdown" options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
 
         let loginButton = <Button className="is-dark" onClick={this.handleClick}>Login</Button>

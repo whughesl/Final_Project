@@ -56,7 +56,12 @@
 .review-body {
   margin-left: 5px !important;
 }
+
+
 #map {
-  /* padding: 3px; */
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
   color: white;
+  /* The width is the width of the web page */
 }

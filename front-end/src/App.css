@@ -90,7 +90,9 @@ h3 {
   margin-top: 20px;
   height: 600px;
 }
-
+.highlighted{
+  background-color: #78808d;
+}
 /* Modal {
   position: fixed;
   width: 400px;

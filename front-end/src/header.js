@@ -9,7 +9,7 @@ class HeaderComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchTemp: "test",
+            searchTemp: "",
             dropValue:'',
         };
         
@@ -41,14 +41,14 @@ class HeaderComponent extends React.Component {
     
     render() {
         let options = [{value:"", label:"Our Picks"},{value:'best', label:'Best Alleyways'}, {value:'worst', label:'Worst Alleyways'}, {value:'contr', label:'Controversial Alleyways'}];
-        let dropdown = <Dropdown id="dropdown" options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
+        // let dropdown = <Dropdown id="dropdown" options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
 
         let loginButton = <Button className="is-dark" onClick={this.handleClick}>Login</Button>
         let signUpButton = <Button  onClick={this.handleSignUp}>Sign Up</Button>
 
         let searchBar = <div className="field">
                             <div className="control">
-                                <input className="input" type="text" value={this.state.searchTemp} onChange={this.handleSearchBar}></input>
+                                <input className="input" type="text" value={this.state.searchTemp} onChange={this.handleSearchBar} placeholder="Search"></input>
                                 <Button  onClick={this.handleSearchSend}>Search</Button>
                                 {loginButton}
                                 {signUpButton}
@@ -64,7 +64,7 @@ class HeaderComponent extends React.Component {
             <div className="hero-body">
                 <div className="container">
                     {searchBar}
-                    {dropdown}  
+                     
                 </div>
                 
             </div>

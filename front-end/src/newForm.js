@@ -24,7 +24,7 @@ class NewForm extends React.Component {
                 rating: this.state.rate
             }
         }).then((response)=>console.log(response))
-        console.log("wait for it")
+        console.log("wait for it") 
     }
     handleNewAlleyText =(e) => {
         this.setState({text: e.target.value})
@@ -45,9 +45,9 @@ class NewForm extends React.Component {
         
         let searchBar = <div className="field" id="nf">
                             <div className="control">
-                                <input className="input" type="text" value={this.state.name} onChange={this.handleNewAlleyName}></input>
-                                <input className="input" type="text" value={this.state.text} onChange={this.handleNewAlleyText}></input>
-                                <input className="input" type="numver" value={this.state.rate} onChange={this.handleNewAlleyRate}></input>
+                                <input className="input" type="text" value={this.state.name} onChange={this.handleNewAlleyName} placeholder="Name"></input>
+                                <input className="input" type="text" value={this.state.text} onChange={this.handleNewAlleyText} placeholder="Review"></input>
+                                <input className="input" type="number" value={this.state.rate} onChange={this.handleNewAlleyRate} placeholder="0"></input>
                                 <Button id="post-button"   onClick={this.handleNewSend}>Post!</Button>
                             </div>
                         </div>

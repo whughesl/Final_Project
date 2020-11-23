@@ -7,6 +7,7 @@
 html, body {
   overflow: hidden;
   height: 105%;
+  background-color: #7d98a1;
 }
 
 .App-logo {
@@ -79,6 +80,12 @@ html, body {
 .review-body {
   height: 400px;
   overflow-y: scroll;
+  border-bottom-color: #39413e;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-top-color: #39413e;
+  border-top-style: solid;
+  border-top-width: 5px;
 }
 
 #map {
@@ -87,6 +94,12 @@ html, body {
   width: 100%;
   /* color: white; */
   /* The width is the width of the web page */
+  
+}
+#myMap {
+  border-color: #39413e;
+  border-style: solid;
+  border-width: 5px;
 }
 h3 {
   padding-top: 2px;
@@ -136,3 +149,8 @@ h3 {
   justify-content: center;
 }
 
+.body-comp {
+  border-width: 5px;
+  border-style: solid;
+  border-color: antiquewhite;
+}

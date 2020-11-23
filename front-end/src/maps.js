@@ -78,8 +78,8 @@ const containerStyle = {
         <div>
             {/* <Form></Form> */}
       <LoadScript
-        googleMapsApiKey="AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8"
-        googleMapsClientId="bcec7b04084195ee"
+        // googleMapsApiKey="AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8"
+        // googleMapsClientId="bcec7b04084195ee"
       >
         <GoogleMap
           mapContainerStyle={containerStyle}
@@ -114,4 +114,4 @@ const containerStyle = {
     )
   }
    
-  export default MyMap
+  // export default MyMap

@@ -30,11 +30,14 @@ class MyMarkers extends React.Component {
                 if (document.getElementById(global.locs[i]._id).getAttribute('class') ==='highlighted review'){
                     document.getElementById(global.locs[i]._id).setAttribute('class', ' review')
                 } else {
-                    // document.getElementsByClassName("highlighted review").setAttribute('class', 'review')
+                    let list=document.getElementsByClassName("highlighted review")
+                    for(let j=0; j<list.length;j++) {
+                        list[j].setAttribute('class', ' review')
+                    }
+                    // console.log(document.getElementsByClassName("highlighted review"))
                     
                     document.getElementById(global.locs[i]._id).setAttribute('class', 'highlighted review')
                 }
-                // document.getElementById(global.locs[i]._id).setAttribute('class', 'highlighted review')
             }
         }
     }

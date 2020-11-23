@@ -28,8 +28,6 @@ class MyNewMap extends React.Component  {
         
         return this.state.lng, this.state.lat
     }
-
-    // const [map, setMap, lat, lng] = React.useState(null)
    
     onLoad = (map) => {
       
@@ -169,15 +167,10 @@ class MyNewMap extends React.Component  {
     }
 
     handleClick = (e) => {
-        //myOverlay = <OverLay >{state.lat}{state.lng}</OverLay>
-        // let newdiv = <div>Test</div>
-        // document.createElement(newdiv)
-        let lat = e.latLng.lat()
-        let lng = e.latLng.lng()
-        this.setState( {show: true,lat: lat, lng: lng})
-        global.position = {lat: lat, lng: lng}
-        // Form();
-        console.log("doing the thing")
+      let lat = e.latLng.lat()
+      let lng = e.latLng.lng()
+      this.setState( {show: true,lat: lat, lng: lng})
+      global.position = {lat: lat, lng: lng}
         
     }
     
@@ -185,14 +178,11 @@ class MyNewMap extends React.Component  {
     render() {
         return (
             <div id="map">
-                {/* <Form></Form> */}
           <LoadScript
             googleMapsApiKey={"AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8"}
-            // mapIds={["bcec7b04084195ee"]}
             mapIds={["bcec7b04084195ee"]}
           >
             <GoogleMap
-              
               id="myMap"
               onLoad={this.onLoad}
               mapContainerStyle={this.state.containerStyle}
@@ -204,13 +194,11 @@ class MyNewMap extends React.Component  {
               onRightClick={this.handleClick}           
             >
               { /* Child components, such as markers, info windows, etc. */ }
-              <MyMarkers/>  
-              
+              <MyMarkers/>   
               <></>
             </GoogleMap>
           </LoadScript>
-          
-          
+
           </div>
         )
     }

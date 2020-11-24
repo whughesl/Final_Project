@@ -42,6 +42,10 @@ class NewForm extends React.Component {
         if(rate > 5) {
             rate=5;
         }
+
+        if (rate < 0) {
+            rate=0;
+        }
        
         this.setState({rate: rate})
     }

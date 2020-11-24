@@ -79,7 +79,7 @@ class BodyComponent extends React.Component {
                        <div className = "column">
                        <h3>{alley.name}</h3>
                         <p className="review-text">{alley.review}</p>
-                        <p>{alley.rating? this.getStars(alley.rating): null}{alley.rating}</p>
+                        <p>{this.getStars(alley.rating)}{alley.rating}</p>
                        </div>
                    
                    </div>

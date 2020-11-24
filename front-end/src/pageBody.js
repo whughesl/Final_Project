@@ -14,11 +14,11 @@ class BodyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showForm:false,
+            showForm:true,
             reviews:null,
         }
         this.mymap =<div onClick={this.getPosition}><MyNewMap ></MyNewMap></div>
-        this.OverlayForm = <NewForm/>
+        this.OverlayForm = <NewForm getReviews={this.getReviews}/>
         this.getReviews();
     }
     reviews=[]

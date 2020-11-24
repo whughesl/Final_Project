@@ -24,7 +24,6 @@ class BodyComponent extends React.Component {
     reviews=[]
     getPosition =() => {
         this.setState({showForm: true})
-        console.log(global.position);
     }
 
     getStars = (num) => {
@@ -60,11 +59,11 @@ class BodyComponent extends React.Component {
         global.locs = list[0].data.map((data)=>{
             return {_id:data._id, lng:data.longitude,lat:data.latitude}
         })
-        console.log(global.locs)
-        console.log(this.reviews)
+        // console.log(global.locs)
+        // console.log(this.reviews)
         
         this.setState({reviews: list[0]})
-        console.log(this.state.reviews)
+        // console.log(this.state.reviews)
 
         return this.reviews;
     }
@@ -101,7 +100,7 @@ class BodyComponent extends React.Component {
         return this.state.showForm? this.OverlayForm: null
     } 
     getPosititon = (position) => {
-        console.log(position)
+        // console.log(position)
     }
     
 

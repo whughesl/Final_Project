@@ -11,7 +11,7 @@ class NewForm extends React.Component {
         }
     }
 
-    handleNewSend = async() => { // added try catch
+    handleNewSend = async() => {
         try {
             let longlat = global.position;
             let response = await Axios({
@@ -24,10 +24,10 @@ class NewForm extends React.Component {
                     longitude: longlat.lng,
                     rating: this.state.rate
                 }
-            }).then((response)=>console.log(response))
+            })
             this.props.getReviews()
         } catch (err) {
-            console.log(err)
+            
         }
         
     }

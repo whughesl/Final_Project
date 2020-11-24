@@ -31,9 +31,7 @@ class HeaderComponent extends React.Component {
     //Happening after second click?
 
     handleDropDown = (event) => {
-        console.log(event);
         this.setState({dropValue: event.value});
-        console.log(this.state.dropValue);
     }
 
     
@@ -42,7 +40,7 @@ class HeaderComponent extends React.Component {
         let options = [{value:"", label:"Our Picks"},{value:'best', label:'Best Alleyways'}, {value:'worst', label:'Worst Alleyways'}, {value:'contr', label:'Controversial Alleyways'}];
         // let dropdown = <Dropdown id="dropdown" options = {options} onChange={this.handleDropDown} value={options[0].label} placeholder="Select an option"/>
 
-        let logoutButton = <a className="button is-dark" href='http://alleyway.herokuapp.com/users/login'>Log out</a>
+        let logoutButton = <a className="button is-dark" href='http://alleyway.herokuapp.com/users/logout'>Log out</a>
 
         let searchBar = 
                         <div className="level">

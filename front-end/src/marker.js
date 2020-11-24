@@ -15,7 +15,6 @@ class MyMarkers extends React.Component {
         let list = global.locs.map((alley)=>{
             return alley.lat !=null
         })
-        console.log(global.locs)
         return list;
     }
     clickHandle = (e) => {
@@ -24,9 +23,6 @@ class MyMarkers extends React.Component {
         // 913666116186704
         for(let i = 0;i < global.locs.length; i++) {
             if(Math.abs(lat- global.locs[i].lat) < .000000000000001) {
-                console.log(global.locs[i]._id)
-                console.log(lat- global.locs[i].lat)
-                console.log(document.getElementById(global.locs[i]._id).getAttribute('class'))
                 if (document.getElementById(global.locs[i]._id).getAttribute('class') ==='highlighted review'){
                     document.getElementById(global.locs[i]._id).setAttribute('class', ' review')
                 } else {
@@ -48,10 +44,8 @@ class MyMarkers extends React.Component {
         }
         let list = global.locs.map((alley) =>{
             if(!alley.lat) {
-                console.log("yep")
                 return
             }
-            console.log(alley);
             let position = {
                 lat: parseFloat(alley.lat),
                 lng: parseFloat(alley.lng)

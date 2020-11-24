@@ -20,7 +20,6 @@ const containerStyle = {
   }
   
   export function getPosition() {
-    console.log(position)
     return position;
   }
 //   function Form() {

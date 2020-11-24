@@ -44,6 +44,7 @@ const containerStyle = {
     const onLoad = React.useCallback(function callback(map) {
       const bounds = new window.google.maps.LatLngBounds();
       map.fitBounds(bounds);
+      const styles = new window.google.maps.MapTypeId()
     //   setMap(map)
     }, [])
    
@@ -78,8 +79,8 @@ const containerStyle = {
         <div>
             {/* <Form></Form> */}
       <LoadScript
-        googleMapsApiKey="AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8"
-        googleMapsClientId="bcec7b04084195ee"
+        // googleMapsApiKey="AIzaSyCoUHqy6ISPhcFkuvW4PHE4zl09NnFROZ8"
+        // googleMapsClientId="bcec7b04084195ee"
       >
         <GoogleMap
           mapContainerStyle={containerStyle}
@@ -114,4 +115,4 @@ const containerStyle = {
     )
   }
    
-  export default MyMap
+  // export default MyMap

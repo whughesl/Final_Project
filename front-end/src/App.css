@@ -2,6 +2,12 @@
 
 .App {
   text-align: center;
+  height: 700px
+}
+html, body {
+  overflow: hidden;
+  height: 105%;
+  background-color: #7d98a1;
 }
 
 .App-logo {
@@ -74,14 +80,26 @@
 .review-body {
   height: 400px;
   overflow-y: scroll;
+  border-bottom-color: #39413e;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-top-color: #39413e;
+  border-top-style: solid;
+  border-top-width: 5px;
 }
 
 #map {
   height: 800px;
   /* The height is 400 pixels */
   width: 100%;
-  color: white;
+  /* color: white; */
   /* The width is the width of the web page */
+  
+}
+#myMap {
+  border-color: #39413e;
+  border-style: solid;
+  border-width: 5px;
 }
 h3 {
   padding-top: 2px;
@@ -109,21 +127,30 @@ h3 {
   margin-bottom: auto;
 }
 #nf {
+  margin-top: 0px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-items: center;
   align-self: auto;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 #body-post {
   margin-left: auto;
   margin-right: auto;
-  color: black;
+  color: rgb(0, 0, 0);
   /* justify-content: center; */
   /* align-content: center; */
 }
 .control {
   align-items: center;
   justify-content: center;
+}
+
+.body-comp {
+  border-width: 5px;
+  border-style: solid;
+  border-color: antiquewhite;
 }

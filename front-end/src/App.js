@@ -4,6 +4,10 @@ import './header.js';
 import 'react-bulma-components';
 import HeaderComponent from './header.js';
 import BodyComponent from './pageBody';
+// import MapStyles from './MapStyles'
+// import MapTypeStyle from '@types/googlemaps'
+
+// const styles = MapStyles.mapStyle;
 
 function App() {
   return (
@@ -14,6 +18,7 @@ function App() {
        <HeaderComponent/>
        <BodyComponent/>
       </header>
+      {}
       
     </div>
   );

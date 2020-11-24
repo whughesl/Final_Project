@@ -131,7 +131,7 @@ class BodyComponent extends React.Component {
         return(
             <div className="body-comp">
                 {this.getStructure()}
-                {this.renderForm()}
+                <div id="filler">{this.renderForm()}</div>
             </div>
         );
     }

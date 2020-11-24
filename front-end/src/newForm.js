@@ -11,20 +11,25 @@ class NewForm extends React.Component {
         }
     }
 
-    handleNewSend = async() => {
-        let longlat = global.position;
-        let response = await Axios({
-            method:'post',
-            url: 'https://alleyway.herokuapp.com/alleyways',
-            data: {
-                name: this.state.name,
-                review: this.state.text,
-                latitude: longlat.lat,
-                longitude: longlat.lng,
-                rating: this.state.rate
-            }
-        }).then((response)=>console.log(response))
-        console.log("wait for it") 
+    handleNewSend = async() => { // added try catch
+        try {
+            let longlat = global.position;
+            let response = await Axios({
+                method:'post',
+                url: 'https://alleyway.herokuapp.com/alleyways',
+                data: {
+                    name: this.state.name,
+                    review: this.state.text,
+                    latitude: longlat.lat,
+                    longitude: longlat.lng,
+                    rating: this.state.rate
+                }
+            }).then((response)=>console.log(response))
+            this.props.getReviews()
+        } catch (err) {
+            console.log(err)
+        }
+        
     }
     handleNewAlleyText =(e) => {
         this.setState({text: e.target.value})
